@@ -1,0 +1,27 @@
+.form {
+  width: 200px;
+  height: 200px;
+  margin: 40px auto;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px 0px, rgba(0, 0, 0, 0.2) 0px 0px 0px;
+}
+
+.form__input-color {
+  width: 100px;
+  margin: 10px;
+}
+
+.form__input-colorText {
+  width: 100px;
+  text-align: center;
+}
+
+.form__btn {
+  width: 40px;
+  font-family: monospace;
+  padding: 4px;
+  text-align: center;
+}

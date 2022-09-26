@@ -12,6 +12,31 @@
 
 .color-text {
   border: 2px solid;
+  width: 100px;
+  text-align: center;
   border-radius: 4px;
   padding: 5px 15px;
+}
+
+.card__delete-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.copyMessage {
+  position: absolute;
+  bottom: 10px;
+  color: rgb(10, 197, 10);
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 2px 5px;
+  background-color: whitesmoke;
 }
