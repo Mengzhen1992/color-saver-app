@@ -2,7 +2,7 @@ import "./App.css";
 import ColorCard from "./components/colorcard/ColorCard";
 import { nanoid } from "nanoid";
 import Form from "./components/form/Form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   /* const initialColorList = [
@@ -27,7 +27,10 @@ function App() {
       colorCode: "#82c91e",
     },
   ]; */
-  const [colorList, setColorList] = useState([]);
+  const [colorList, setColorList] = useState(() => {
+    return JSON.parse(localStorage.getItem("colorList")) ?? [];
+  });
+
   function addColor(newColor) {
     setColorList((prevList) => [
       {
@@ -38,7 +41,9 @@ function App() {
     ]);
   }
 
-  console.log(colorList);
+  useEffect(() => {
+    localStorage.setItem("colorList", JSON.stringify(colorList));
+  }, [colorList]);
 
   function updateColor(id, colorCode) {
     console.log(id);
